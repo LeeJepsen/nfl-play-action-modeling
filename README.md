@@ -3,7 +3,7 @@
 ## Why this project
 In the modern NFL, play action remains one of the most efficient pass concepts, and offenses continue to increase their use of pre-snap motion to disguise intent and stress defenses. This project started with a practical football question:
 
-**Can we use pre-snap information to predict when a play action pass will be called, and when it will be successful?** 
+**Can I use pre-snap information to predict when a play action pass will be called, and when it will be successful?** 
 
 Rather than treating this as a “perfect prediction” problem, I approached it as a supervised learning exploration to understand:
 - what pre-snap variables actually provide signal
@@ -76,12 +76,12 @@ Feature importance suggested the strongest drivers were:
 - Run-pass option indicator
 - Pre-snap win probability
 
-**Takeaway:** Pre-snap variables alone provide limited signal for play action prediction. The results support the idea that play action is largely a strategic coaching decision influenced by context not fully captured in the dataset.
+**Takeaway:** Pre-snap variables alone provide limited signal for play action prediction. The results support the idea that play action is largely a strategic coaching decision influenced by context.
 
 
 ### Predicting Play Action Success
 - Best KNN Validation Accuracy: **55.5%**
-- AUC: **0.52** (near random) :contentReference[oaicite:14]{index=14}
+- AUC: **0.52** (near random) 
 - Lift chart results showed the model struggled to rank successful plays above baseline.
 
 **Takeaway:** Pre-snap variables and defensive coverage are not sufficient to predict play action success with meaningful reliability. Success likely depends more on play design, protection, execution, and personnel matchups.  Some play-calling decisions require more context than typical pre-snap datasets provide.
@@ -92,3 +92,22 @@ Even though predictive performance was limited, the modeling workflow highlighte
 - motion + shifts
 - play sequencing and tendency features
 - matchup-specific context
+
+## Key Visuals
+
+### Random Forest Performance (Play Action Call Prediction)
+AUC = 0.593 (slightly better than random), showing limited predictive separation from pre-snap variables alone.
+<img width="503" height="389" alt="image" src="https://github.com/user-attachments/assets/1e32a7c1-9504-49a5-8927-879ae9b02d99" />
+
+
+### Feature Importance (Random Forest)
+Coverage and game context provided the strongest directional signal.
+<img width="602" height="454" alt="image" src="https://github.com/user-attachments/assets/a940049a-9fbd-4eab-8673-ea7174a57f07" />
+
+
+
+### Cumulative Gains / Lift
+Model prioritization was only slightly better than a random baseline.
+<img width="558" height="339" alt="image" src="https://github.com/user-attachments/assets/47fc00ae-7ac3-4520-bf95-789d7582b2d1" />
+
+
