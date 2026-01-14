@@ -1,5 +1,5 @@
 # NFL Play Action Modeling Exploration (Supervised Learning)
-This repo contains the full Writeup, R scripts, and data file from NFLs 2025 Big Data Bowl plays sheet.
+This repo contains the full writeup, R scripts, and data file from NFLs 2025 Big Data Bowl plays sheet.
 
 ## Why this project
 In the modern NFL, play action remains one of the most efficient pass concepts, and offenses continue to increase their use of pre-snap motion to disguise intent and stress defenses. This project started with a practical football question:
